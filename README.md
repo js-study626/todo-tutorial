@@ -18,20 +18,40 @@
 
 ## 시작하기
 
+### 준비물
+
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org) (Next.js 16 실행에 필요, 20.9 이상)
+- [bun](https://bun.sh) 1.3.6 이상 (이 저장소의 패키지 매니저. `npm`은 사용하지 않습니다)
+
+설치 확인:
+
 ```bash
+node -v
+bun -v
+```
+
+### 설치와 실행
+
+```bash
+git clone https://github.com/js-study626/todo-tutorial.git
+cd todo-tutorial
 bun install
 bun dev
 ```
 
-개발 서버는 기본적으로 [http://localhost:3000](http://localhost:3000) 에서 열립니다.
+개발 서버는 기본적으로 [http://localhost:3000](http://localhost:3000) 에서 열립니다. 브라우저에서 할 일 화면이 보이면 성공입니다. 종료는 터미널에서 `Ctrl+C` 입니다.
 
-자주 쓰는 스크립트:
+3000번 포트가 이미 사용 중이면 Next.js가 다른 포트(3001 등)로 띄우니, 터미널에 표시된 주소를 확인하세요.
+
+### 자주 쓰는 스크립트
 
 ```bash
 bun run build      # 프로덕션 빌드
-bun run start      # 빌드 결과 실행
+bun run start      # 빌드 결과 실행 (먼저 build 필요)
 bun run lint       # ESLint
 bun run typecheck  # tsc --noEmit
+bun run test       # Vitest
 bun run format     # Prettier 포맷팅
 ```
 
